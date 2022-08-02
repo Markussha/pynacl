@@ -12,7 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
+from nacl.bindings.crypto_auth import (
+    crypto_auth_BYTES,
+    crypto_auth_KEYBYTES,
+    crypto_auth,
+    crypto_auth_verify,
+    crypto_auth_keygen,
+)
 from nacl.bindings.crypto_aead import (
     crypto_aead_chacha20poly1305_ABYTES,
     crypto_aead_chacha20poly1305_KEYBYTES,
