@@ -43,7 +43,6 @@ def crypto_auth_verify(tag: bytes, message: bytes, key: bytes) -> bytes:
     """
     rc = lib.crypto_auth(tag, message, len(message), key)
     ensure(rc == 0, "Invalid tag", raising=exc.RuntimeError)
-    return ffi.buffer(digest, crypto_auth_BYTES)[:]
 
 def crypto_auth_keygen(message: bytes, key: bytes) -> bytes:
     """
